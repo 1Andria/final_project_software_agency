@@ -1,4 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
+    transition: all 1s ease-in-out;
+}
+.main_container{
+    max-width:100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    width: 100%;
+    height:676px ;
+    background: linear-gradient(358deg, #000 -10.63%, rgba(0, 0, 0, 0.00) 98.03%);
+    
+}
+.header_above{
+    display: flex;
+    background-color:gray;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;    
+}
+.head_div{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.H_logo_name{
+    display: flex;
+    gap: 12px;
+    margin-left: 10px;
+    
+}
+.H_logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF9F34;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.H_name{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.H_about{
+    display: flex;
+    gap: 37px;
+    align-items: center;
+    
+}
+.H_abt_sign{
+    display: flex;
+    gap: 50px;
+
+}
+.H_abt{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+.H_log_sign{
+    display: flex;
+    margin-right: 10px;
+}
+.H_login{
+    width: 118px;
+    height: 38px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.H_sign{
+    width: 118px;
+    height: 38px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.H_sign:hover{
+    border: 1.2px solid #FFF;
+    cursor: pointer;
+    
+}
+.H_login:hover{
+    border: 1.2px solid #FFF; 
+    cursor: pointer; 
+}
+.header_below{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.H_info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 112px;
+    margin-left: 10px;
+    gap: 23px;
+    min-width: 540px;
+}
+.H_heading{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px; 
+    letter-spacing: 0.5px;
+}
+.H_paragraph{
+    color: rgba(255, 255, 255, 0.71);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; 
+}
+.H_btns{
+    display: flex;
+    gap: 10px;
+}
+.burg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+}
+.H_burger{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+    
+}
+.hid_inf{
+    position: absolute;
+    top: 50px;
+    width: 100px;
+    right: 45px;
+    display: none;
+}
+.H_ab{
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    color:white ;
+    z-index: 999;
+    
+}
+
+.hidden_info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;   
+    background-color:#FF9F34 ;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.H_bt{
+    background: transparent;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 156px;
+    height: 56px;
+    border: 1.2px solid white;
+    cursor: pointer;
+    display: none;
+}
+.H_btn{
+    background: #FF9F34;
+    width: 165px;
+    height: 56px;
+    border: none;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.H_video_div{
+    margin-top: 70px;
+    max-width: 650px;
+    max-height: auto;
+    background-color: black;
+    margin-right: 10px;
+}
+.H_video{
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.hidden_video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation-name: cont_animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.hidden_video_div{
+    position: relative;
+    max-width: 700px;
+    max-height: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.hidden_container{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    display: none;
+    
+}
+@keyframes cont_animation {
+    0%{
+        height: 50%;
+        width: 50%;
+    }
+    100%{
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+
+#but_l{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:grey;
+    border-radius: 50px;
+    border: none;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+@media (max-width:1150px) {
+    .H_info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 112px;
+        margin-left: 10px;
+        gap: 23px;
+        min-width: 480px;
+    }
+    .H_heading {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0.5px;
+    }
+    .H_paragraph {
+        color: rgba(255, 255, 255, 0.71);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+    
+}
+@media (max-width:1000px) {
+    .H_info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 112px;
+        margin-left: 10px;
+        gap: 23px;
+        min-width: 440px;
+    }
+    .H_heading {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: 0.5px;
+    }
+    .H_paragraph {
+        color: rgba(255, 255, 255, 0.71);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+    .H_abt_sign{
+        display: none;
+    }
+    .H_burger{
+        display: block;
+    }
+    .burg{
+        display: block;
+    }
+    
+    
+}
+@media (max-width:930px) {
+    .H_video_div{
+        display: none;
+    }
+    .header_below{
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+    }
+    .H_bt{
+        display: block;
+    }
+    .H_heading {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px; 
+        letter-spacing: 0.5px;
+    }
+    .H_paragraph {
+        color: rgba(255, 255, 255, 0.71);
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+    .H_info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 34px;
+        margin-left: 10px;
+        gap: 23px;
+        min-width: auto;
+    }
+    .header{
+        height: 506px;
+    }
+
 }
