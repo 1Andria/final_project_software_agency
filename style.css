@@ -13,12 +13,11 @@
 .header{
     width: 100%;
     height:676px ;
-    background: linear-gradient(358deg, #000 -10.63%, rgba(0, 0, 0, 0.00) 98.03%);
+    background: linear-gradient(358deg, #000 -10.63%, rgba(0, 0, 0, 0.00) 130.03%);
     
 }
 .header_above{
     display: flex;
-    background-color:gray;
     align-items: center;
     justify-content: space-between;
     height: 50px;    
@@ -30,13 +29,13 @@
     margin-left: auto;
     margin-right: auto;
 }
-.H_logo_name{
+.head_logo_name{
     display: flex;
     gap: 12px;
     margin-left: 10px;
     
 }
-.H_logo{
+.head_logo{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -51,7 +50,7 @@
     justify-content: center;
     align-items: center;
 }
-.H_name{
+.head_name{
     color: #FFF;
     font-family: Poppins;
     font-size: 24px;
@@ -59,18 +58,18 @@
     font-weight: 600;
     line-height: normal;
 }
-.H_about{
+.head_about{
     display: flex;
     gap: 37px;
     align-items: center;
     
 }
-.H_abt_sign{
+.head_abt_sign{
     display: flex;
     gap: 50px;
 
 }
-.H_abt{
+.head_abt{
     color: #FFF;
     font-family: Poppins;
     font-size: 14px;
@@ -79,11 +78,11 @@
     line-height: normal;
     cursor: pointer;
 }
-.H_log_sign{
+.head_log_sign{
     display: flex;
     margin-right: 10px;
 }
-.H_login{
+.head_login{
     width: 118px;
     height: 38px;
     color: #FFF;
@@ -96,7 +95,7 @@
     align-items: center;
     justify-content: center;
 } 
-.H_sign{
+.head_sign{
     width: 118px;
     height: 38px;
     color: #FFF;
@@ -110,12 +109,12 @@
     justify-content: center;
     
 }
-.H_sign:hover{
+.head_sign:hover{
     border: 1.2px solid #FFF;
     cursor: pointer;
     
 }
-.H_login:hover{
+.head_login:hover{
     border: 1.2px solid #FFF; 
     cursor: pointer; 
 }
@@ -125,7 +124,7 @@
     justify-content: space-between;
 
 }
-.H_info{
+.head_info{
     display: flex;
     flex-direction: column;
     margin-top: 112px;
@@ -133,7 +132,7 @@
     gap: 23px;
     min-width: 540px;
 }
-.H_heading{
+.head_heading{
     color: #FFF;
     font-family: Poppins;
     font-size: 52px;
@@ -142,7 +141,7 @@
     line-height: 72px; 
     letter-spacing: 0.5px;
 }
-.H_paragraph{
+.head_paragraph{
     color: rgba(255, 255, 255, 0.71);
     font-family: Poppins;
     font-size: 16px;
@@ -150,7 +149,7 @@
     font-weight: 400;
     line-height: 32px; 
 }
-.H_btns{
+.head_btns{
     display: flex;
     gap: 10px;
 }
@@ -160,7 +159,7 @@
     position: relative;
     display: none;
 }
-.H_burger{
+.head_burger{
     width: 40px;
     height: 40px;
     margin-right: 10px;
@@ -175,7 +174,7 @@
     right: 45px;
     display: none;
 }
-.H_ab{
+.head_ab{
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -202,7 +201,7 @@
     padding-bottom: 10px;
     
 }
-.H_bt{
+.head_bt{
     background: transparent;
     color: #FFF;
     font-family: Poppins;
@@ -216,7 +215,7 @@
     cursor: pointer;
     display: none;
 }
-.H_btn{
+.head_btn{
     background: #FF9F34;
     width: 165px;
     height: 56px;
@@ -230,14 +229,14 @@
     cursor: pointer;
 }
 
-.H_video_div{
+.head_video_div{
     margin-top: 70px;
     max-width: 650px;
     max-height: auto;
     background-color: black;
     margin-right: 10px;
 }
-.H_video{
+.head_video{
     width: 100%;
     height: 100%;
 }
@@ -301,7 +300,7 @@
     font-size: 15px;
 }
 @media (max-width:1150px) {
-    .H_info{
+    .head_info{
         display: flex;
         flex-direction: column;
         margin-top: 112px;
@@ -309,7 +308,7 @@
         gap: 23px;
         min-width: 480px;
     }
-    .H_heading {
+    .head_heading {
         color: #FFF;
         font-family: Poppins;
         font-size: 45px;
@@ -318,7 +317,7 @@
         line-height: 72px;
         letter-spacing: 0.5px;
     }
-    .H_paragraph {
+    .head_paragraph {
         color: rgba(255, 255, 255, 0.71);
         font-family: Poppins;
         font-size: 16px;
@@ -329,7 +328,7 @@
     
 }
 @media (max-width:1000px) {
-    .H_info{
+    .head_info{
         display: flex;
         flex-direction: column;
         margin-top: 112px;
@@ -337,7 +336,7 @@
         gap: 23px;
         min-width: 440px;
     }
-    .H_heading {
+    .head_heading {
         color: #FFF;
         font-family: Poppins;
         font-size: 40px;
@@ -346,7 +345,7 @@
         line-height: 72px;
         letter-spacing: 0.5px;
     }
-    .H_paragraph {
+    .head_paragraph {
         color: rgba(255, 255, 255, 0.71);
         font-family: Poppins;
         font-size: 14px;
@@ -354,10 +353,10 @@
         font-weight: 400;
         line-height: 32px;
     }
-    .H_abt_sign{
+    .head_abt_sign{
         display: none;
     }
-    .H_burger{
+    .head_burger{
         display: block;
     }
     .burg{
@@ -367,7 +366,7 @@
     
 }
 @media (max-width:930px) {
-    .H_video_div{
+    .head_video_div{
         display: none;
     }
     .header_below{
@@ -375,10 +374,10 @@
         align-items: center;
         justify-content: center;
     }
-    .H_bt{
+    .head_bt{
         display: block;
     }
-    .H_heading {
+    .head_heading {
         color: #FFF;
         font-family: Poppins;
         font-size: 32px;
@@ -387,7 +386,7 @@
         line-height: 48px; 
         letter-spacing: 0.5px;
     }
-    .H_paragraph {
+    .head_paragraph {
         color: rgba(255, 255, 255, 0.71);
         font-family: Poppins;
         font-size: 16px;
@@ -395,7 +394,7 @@
         font-weight: 400;
         line-height: 32px;
     }
-    .H_info{
+    .head_info{
         display: flex;
         flex-direction: column;
         margin-top: 34px;

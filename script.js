@@ -15,11 +15,11 @@ hidden_video.addEventListener("ended", () => {
   hidden_container.style.display = "none";
 });
 
-let H_burg = document.getElementById("H_burg");
+let head_burg = document.getElementById("head_burg");
 let hid_info = document.getElementById("hid_info");
 let Click = true;
 
-H_burg.addEventListener("click", () => {
+head_burg.addEventListener("click", () => {
   if (Click) {
     hid_info.style.display = "block";
   } else {
