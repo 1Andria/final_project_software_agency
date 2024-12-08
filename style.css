@@ -14,13 +14,14 @@
     width: 100%;
     height:676px ;
     background: linear-gradient(358deg, #000 -10.63%, rgba(0, 0, 0, 0.00) 130.03%);
-    
 }
 .header_above{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;    
+    height: 50px;  
+    
+    
 }
 .head_div{
     display: flex;
@@ -32,8 +33,7 @@
 .head_logo_name{
     display: flex;
     gap: 12px;
-    margin-left: 10px;
-    
+    margin-left: 10px;   
 }
 .head_logo{
     width: 40px;
@@ -50,6 +50,12 @@
     justify-content: center;
     align-items: center;
 }
+.head_ul{
+    display: flex;
+    list-style: none;
+    gap: 37px;
+    align-items: center;
+}
 .head_name{
     color: #FFF;
     font-family: Poppins;
@@ -60,14 +66,11 @@
 }
 .head_about{
     display: flex;
-    gap: 37px;
     align-items: center;
-    
 }
 .head_abt_sign{
     display: flex;
     gap: 50px;
-
 }
 .head_abt{
     color: #FFF;
@@ -106,13 +109,11 @@
     line-height: normal;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 .head_sign:hover{
     border: 1.2px solid #FFF;
     cursor: pointer;
-    
 }
 .head_login:hover{
     border: 1.2px solid #FFF; 
@@ -122,7 +123,6 @@
     display: flex ;
     align-items: center;
     justify-content: space-between;
-
 }
 .head_info{
     display: flex;
@@ -153,53 +153,99 @@
     display: flex;
     gap: 10px;
 }
+
 .burg{
     display: flex;
     flex-direction: column;
     position: relative;
-    display: none;
-}
-.head_burger{
-    width: 40px;
-    height: 40px;
     margin-right: 10px;
     display: none;
+}
+.head_burg{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     cursor: pointer;
     
 }
-.hid_inf{
-    position: absolute;
-    top: 50px;
-    width: 100px;
-    right: 45px;
-    display: none;
+.burg_line{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    
 }
-.head_ab{
+.burg_line_sec{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    
+}
+.burg_line_thr{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    
+}
+.burg_line_plus{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(90deg);
+}
+.burg_line_sec_plus{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(200deg);
+}
+.burg_line_thr_plus{
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(90deg);
+}
+.head_hidden_info{
+    position: absolute;
+    z-index: 111;
+    top: 50px;
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(359deg, #FF9F34 86.63%, rgba(255, 165, 0, 0.00) 98.03%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.head_hidden_info_plus{
+    position: absolute;
+    z-index: 111;
+    top: 50px;
+    width: 100%;
+    height: 450px;
+    background:  linear-gradient(359deg, #FF9F34 86.63%, rgba(255, 165, 0, 0.00) 98.03%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.head_ul_hid{
+    text-align: center;
+    opacity: 0;
+}
+.head_ul_hid_plus{
+    display: block;
+    opacity: 1;
+}
+.hid_li{
+    color: #FFF;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    list-style: none;
+    margin-top: 16px;
     cursor: pointer;
-    color:white ;
-    z-index: 999;
-    
-}
-
-.hidden_info{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;   
-    background-color:#FF9F34 ;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
 }
 .head_bt{
     background: transparent;
@@ -214,6 +260,7 @@
     border: 1.2px solid white;
     cursor: pointer;
     display: none;
+    
 }
 .head_btn{
     background: #FF9F34;
@@ -228,7 +275,6 @@
     line-height: normal;
     cursor: pointer;
 }
-
 .head_video_div{
     margin-top: 70px;
     max-width: 650px;
@@ -261,7 +307,6 @@
     max-height: 500px;
     margin-left: 10px;
     margin-right: 10px;
-    
 }
 .hidden_container{
     height: 100%;
@@ -270,7 +315,6 @@
     position: fixed;
     top: 0px;
     display: none;
-    
 }
 @keyframes cont_animation {
     0%{
@@ -281,9 +325,7 @@
         height: 100%;
         width: 100%;
     }
-    
 }
-
 #but_l{
     width: 20px;
     height: 20px;
@@ -325,7 +367,6 @@
         font-weight: 400;
         line-height: 32px;
     }
-    
 }
 @media (max-width:1000px) {
     .head_info{
@@ -356,13 +397,9 @@
     .head_abt_sign{
         display: none;
     }
-    .head_burger{
-        display: block;
-    }
     .burg{
         display: block;
     }
-    
     
 }
 @media (max-width:930px) {
@@ -405,5 +442,4 @@
     .header{
         height: 506px;
     }
-
 }
