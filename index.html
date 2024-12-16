@@ -28,7 +28,7 @@
                 </nav>
               </div>
               <div class="head_log_sign">
-                <div class="head_login">Login</div>
+                <div class="head_login" id="login_div">Login</div>
                 <div class="head_sign">Sign Up</div>
               </div>
             </div>
@@ -36,7 +36,6 @@
               <div class="head_burg" id="head_burg">
                 <div id="burg_line" class="burg_line"></div>
                 <div id="burg_line_sec" class="burg_line_sec"></div>
-                <div id="burg_line_thr" class="burg_line_thr"></div>
               </div>
             </div>
           </div>
@@ -48,7 +47,7 @@
                 <li class="hid_li">IT Solutions</li>
                 <li class="hid_li">Feature</li>
                 <li class="hid_li">Contact Us</li>
-                <li class="hid_li">Login</li>
+                <li id="login_hidden" class="hid_li">Login</li>
                 <li class="hid_li">Sign Up</li>
               </ul>
             </nav>
@@ -92,6 +91,77 @@
               src="./video/team_working.mp4"
             ></video>
             <button id="but_l">X</button>
+          </div>
+        </div>
+      </div>
+      <div id="log_container" class="log_container">
+        <div class="log_center">
+          <div class="login">
+            <div class="log_info">
+              <h class="log_header">Login to your account</h>
+              <p class="log_para">Login using social networks</p>
+              <div class="log_icon_div">
+                <img
+                  class="log_icons"
+                  src="./images/facebook_icon.png"
+                  alt="facebook"
+                  id="facebook"
+                />
+                <div class="log_ic_div">
+                  <img
+                    class="log_icon"
+                    src="./images/google.png"
+                    alt="google"
+                    id="google"
+                  />
+                </div>
+                <img
+                  class="log_icons"
+                  src="./images/linkedin_icon.png"
+                  alt="linkedin"
+                  id="linkedin"
+                />
+                <div class="log_ic_div">
+                  <img
+                    class="log_icon"
+                    src="./images/gmail (1).png"
+                    alt="gmail"
+                    id="gmail"
+                  />
+                </div>
+              </div>
+              <span class="log_or">OR</span>
+              <form class="log_inputs" id="log_form">
+                <input type="email" placeholder="Email" class="log_email" />
+                <div class="pass_log_div">
+                  <input
+                    id="log_pass"
+                    type="password"
+                    placeholder="password"
+                    class="log_email"
+                  />
+                  <button id="log_see_btn" class="see_btn">
+                    <img
+                      id="log_seen"
+                      class="log_seen"
+                      src="./images/seen.png"
+                      alt="eye"
+                    />
+                    <div id="log_unseen" class="log_unseen"></div>
+                  </button>
+                </div>
+                <button type="submit" class="log_btn">Sign In</button>
+              </form>
+            </div>
+            <div class="log_image">
+              <h1 class="log_new">New Here?</h1>
+              <p class="log_new_para">
+                Sign up and discover a great <br />
+                amount of new opportunities!
+              </p>
+              <button class="log_new_btn">Sign Up</button>
+            </div>
+            <button id="rem_btn" class="rem_btn">X</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-//watch video ღილაკზე დაჭერისას ვიდეოს გამოტანა.
+//watch video on a click.
 let hidden_container = document.getElementById("hidden_container");
 let watch_btn = document.getElementById("watch_btn");
 let but_l = document.getElementById("but_l");
@@ -8,17 +8,17 @@ watch_btn.addEventListener("click", () => {
   hidden_container.style.display = "block";
 });
 
-//ვიდეოს გათიშვის ღილაკი
+//close video on click.
 but_l.addEventListener("click", () => {
   hidden_container.style.display = "none";
 });
 
-//ვიდეოს დასრულების შემდეგ ავტომატურად ჩახურვა
+//close video when its ended.
 hidden_video.addEventListener("ended", () => {
   hidden_container.style.display = "none";
 });
 
-//ბურგერზე დაჭერისას დამატებითი ინფორმაციის გამოტანა
+//burger menu
 let head_burg = document.getElementById("head_burg");
 let head_hidden_info = document.getElementById("head_hidden_info");
 let head_ul_hid = document.getElementById("head_ul_hid");
@@ -29,13 +29,78 @@ head_burg.addEventListener("click", () => {
   }, 70);
 });
 
-//ბურგერზე დაჭერისას კონსტრუქციული ცვლილება.
+// shepe "X" for burger menu.
 let burg_line = document.getElementById("burg_line");
 let burg_line_sec = document.getElementById("burg_line_sec");
-let burg_line_thr = document.getElementById("burg_line_thr");
 
 head_burg.addEventListener("click", () => {
   burg_line.classList.toggle("burg_line_plus");
   burg_line_sec.classList.toggle("burg_line_sec_plus");
-  burg_line_thr.classList.toggle("burg_line_thr_plus");
+});
+
+//invalid password for login pass input.
+let log_form = document.getElementById("log_form");
+let log_pass = document.getElementById("log_pass");
+log_form.addEventListener("submit", (value) => {
+  value.preventDefault();
+
+  let PasswordValidation =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+  if (!PasswordValidation.test(log_pass.value)) {
+    alert("invalid password");
+  } else {
+  }
+  password.value = "";
+});
+//password
+let log_see_btn = document.getElementById("log_see_btn");
+let log_seen = document.getElementById("log_seen");
+let log_unseen = document.getElementById("log_unseen");
+
+log_see_btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  log_unseen.classList.toggle("log_unseen_plus");
+  if (log_pass.type === "password") {
+    log_pass.type = "text";
+  } else {
+    log_pass.type = "password";
+  }
+});
+//login
+let login_div = document.getElementById("login_div");
+let log_container = document.getElementById("log_container");
+let rem_btn = document.getElementById("rem_btn");
+let login_hidden = document.getElementById("login_hidden");
+login_div.addEventListener("click", () => {
+  log_container.style.display = "block";
+});
+
+rem_btn.addEventListener("click", () => {
+  log_container.style.display = "none";
+});
+
+login_hidden.addEventListener("click", () => {
+  log_container.style.display = "block";
+});
+//social networks
+let facebook = document.getElementById("facebook");
+facebook.addEventListener("click", () => {
+  window.open("https://www.facebook.com/");
+});
+let google = document.getElementById("google");
+google.addEventListener("click", () => {
+  window.open(
+    "https://accounts.google.com/v3/signin/identifier?checkedDomains=youtube&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button%26gar%3DWzEzMywiMjM2NzM2Il0%26sl%3Dtrue&ddm=1&dsh=S574083505%3A1734179430686867&flowEntry=AccountChooser&flowName=GlifWebSignIn&ifkv=AeZLP99qHuRWaqF6uiIYxzOoUXZf2v2lizJOzwPmOVlbKd08J6Q_-eiqwmmC9RemdTv6KXWVaz0elg&pstMsg=1&service=accountsettings"
+  );
+});
+let linkedin = document.getElementById("linkedin");
+linkedin.addEventListener("click", () => {
+  window.open(
+    "https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+  );
+});
+let gmail = document.getElementById("gmail");
+gmail.addEventListener("click", () => {
+  window.open("https://workspace.google.com/gmail/");
 });
