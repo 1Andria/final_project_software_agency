@@ -726,4 +726,12 @@
     .log_new_btn{
         margin-bottom: 30px;
     }
+    @keyframes login_appear {
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 780px;
+        }
+    }
 }
