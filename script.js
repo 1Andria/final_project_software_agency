@@ -104,3 +104,48 @@ let gmail = document.getElementById("gmail");
 gmail.addEventListener("click", () => {
   window.open("https://workspace.google.com/gmail/");
 });
+
+//on click sign up container appear
+let head_sign = document.getElementById("head_sign");
+let sign_container = document.getElementById("sign_container");
+head_sign.addEventListener("click", () => {
+  sign_container.style.display = "block";
+});
+let sign_hidden = document.getElementById("sign_hidden");
+sign_hidden.addEventListener("click", () => {
+  sign_container.style.display = "block";
+});
+//sign up visible/unvisible password
+let sign_seen = document.getElementById("sign_seen");
+let sign_see_btn = document.getElementById("sign_see_btn");
+let sign_unseen = document.getElementById("sign_unseen");
+let sign_pass = document.getElementById("sign_pass");
+sign_see_btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  sign_unseen.classList.toggle("sign_unseen_plus");
+  if (sign_pass.type === "password") {
+    sign_pass.type = "text";
+  } else {
+    sign_pass.type = "password";
+  }
+});
+//sign up visible/unvisible repeat password
+let repeat_pass = document.getElementById("repeat_pass");
+let repeat_see_btn = document.getElementById("repeat_see_btn");
+let repeat_seen = document.getElementById("repeat_seen");
+let repeat_unseen = document.getElementById("repeat_unseen");
+repeat_see_btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  repeat_unseen.classList.toggle("sign_unseen_plus");
+  if (repeat_pass.type === "password") {
+    repeat_pass.type = "text";
+  } else {
+    repeat_pass.type = "password";
+  }
+});
+//on click div disappeared
+let sign_rem_btn = document.getElementById("sign_rem_btn");
+
+sign_rem_btn.addEventListener("click", () => {
+  sign_container.style.display = "none";
+});
