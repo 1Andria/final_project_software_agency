@@ -29,7 +29,7 @@
               </div>
               <div class="head_log_sign">
                 <div class="head_login" id="login_div">Login</div>
-                <div class="head_sign">Sign Up</div>
+                <div id="head_sign" class="head_sign">Sign Up</div>
               </div>
             </div>
             <div class="burg">
@@ -48,7 +48,7 @@
                 <li class="hid_li">Feature</li>
                 <li class="hid_li">Contact Us</li>
                 <li id="login_hidden" class="hid_li">Login</li>
-                <li class="hid_li">Sign Up</li>
+                <li id="sign_hidden" class="hid_li">Sign Up</li>
               </ul>
             </nav>
           </div>
@@ -132,13 +132,17 @@
               </div>
               <span class="log_or">OR</span>
               <form class="log_inputs" id="log_form">
-                <input type="email" placeholder="Email" class="log_email" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="log_sign_input"
+                />
                 <div class="pass_log_div">
                   <input
                     id="log_pass"
                     type="password"
                     placeholder="password"
-                    class="log_email"
+                    class="log_sign_input"
                   />
                   <button id="log_see_btn" class="see_btn">
                     <img
@@ -162,6 +166,103 @@
               <button class="log_new_btn">Sign Up</button>
             </div>
             <button id="rem_btn" class="rem_btn">X</button>
+          </div>
+        </div>
+      </div>
+      <div id="sign_container" class="log_container">
+        <div class="log_center">
+          <div class="sign_up">
+            <div class="log_info">
+              <h class="log_header">Sign up</h>
+              <p class="log_para">continue using social networks</p>
+              <div class="log_icon_div">
+                <img
+                  class="log_icons"
+                  src="./images/facebook_icon.png"
+                  alt="facebook"
+                  id="facebook"
+                />
+                <div class="log_ic_div">
+                  <img
+                    class="log_icon"
+                    src="./images/google.png"
+                    alt="google"
+                    id="google"
+                  />
+                </div>
+                <img
+                  class="log_icons"
+                  src="./images/linkedin_icon.png"
+                  alt="linkedin"
+                  id="linkedin"
+                />
+                <div class="log_ic_div">
+                  <img
+                    class="log_icon"
+                    src="./images/gmail (1).png"
+                    alt="gmail"
+                    id="gmail"
+                  />
+                </div>
+              </div>
+              <span class="log_or">OR</span>
+              <form id="sign_form" class="sign_inputs">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  class="log_sign_input"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="log_sign_input"
+                />
+                <div class="pass_log_div">
+                  <input
+                    id="sign_pass"
+                    type="password"
+                    placeholder="password"
+                    class="log_sign_input"
+                  />
+                  <button id="sign_see_btn" class="see_btn">
+                    <img
+                      id="sign_seen"
+                      class="log_seen"
+                      src="./images/seen.png"
+                      alt="eye"
+                    />
+                    <div id="sign_unseen" class="sign_unseen"></div>
+                  </button>
+                </div>
+                <div class="pass_log_div">
+                  <input
+                    id="repeat_pass"
+                    type="password"
+                    placeholder="Repeat password"
+                    class="log_sign_input"
+                  />
+                  <button id="repeat_see_btn" class="see_btn">
+                    <img
+                      id="repeat_seen"
+                      class="log_seen"
+                      src="./images/seen.png"
+                      alt="eye"
+                    />
+                    <div id="repeat_unseen" class="log_unseen"></div>
+                  </button>
+                </div>
+                <button type="submit" class="log_btn">Sign Up</button>
+              </form>
+            </div>
+            <div class="log_image">
+              <h class="log_new"
+                >Already have <br />
+                an account?</h
+              >
+              <p class="log_new_para">Welcome back</p>
+              <button class="log_new_btn">Sign in</button>
+            </div>
+            <button id="sign_rem_btn" class="rem_btn">X</button>
           </div>
         </div>
       </div>
