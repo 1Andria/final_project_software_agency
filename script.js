@@ -37,23 +37,6 @@ head_burg.addEventListener("click", () => {
   burg_line.classList.toggle("burg_line_plus");
   burg_line_sec.classList.toggle("burg_line_sec_plus");
 });
-
-//invalid password for login pass input.
-let log_form = document.getElementById("log_form");
-let log_pass = document.getElementById("log_pass");
-log_form.addEventListener("submit", (value) => {
-  value.preventDefault();
-
-  let PasswordValidation =
-    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
-
-  if (!PasswordValidation.test(log_pass.value)) {
-    alert("invalid password");
-  } else {
-  }
-  password.value = "";
-});
-//password
 let log_see_btn = document.getElementById("log_see_btn");
 let log_seen = document.getElementById("log_seen");
 let log_unseen = document.getElementById("log_unseen");
@@ -148,4 +131,108 @@ let sign_rem_btn = document.getElementById("sign_rem_btn");
 
 sign_rem_btn.addEventListener("click", () => {
   sign_container.style.display = "none";
+});
+//sign up sites.
+let facebook_sign = document.getElementById("facebook_sign");
+facebook_sign.addEventListener("click", () => {
+  window.open("https://www.facebook.com/");
+});
+let google_sign = document.getElementById("google_sign");
+google_sign.addEventListener("click", () => {
+  window.open(
+    "https://accounts.google.com/v3/signin/identifier?checkedDomains=youtube&continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dgo-to-account-button%26gar%3DWzEzMywiMjM2NzM2Il0%26sl%3Dtrue&ddm=1&dsh=S574083505%3A1734179430686867&flowEntry=AccountChooser&flowName=GlifWebSignIn&ifkv=AeZLP99qHuRWaqF6uiIYxzOoUXZf2v2lizJOzwPmOVlbKd08J6Q_-eiqwmmC9RemdTv6KXWVaz0elg&pstMsg=1&service=accountsettings"
+  );
+});
+let linkedin_sign = document.getElementById("linkedin_sign");
+linkedin_sign.addEventListener("click", () => {
+  window.open(
+    "https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+  );
+});
+
+let gmail_sign = document.getElementById("gmail_sign");
+gmail_sign.addEventListener("click", () => {
+  window.open("https://workspace.google.com/gmail/");
+});
+//sign in(in sign up)
+let sign_login = document.getElementById("sign_login");
+sign_login.addEventListener("click", () => {
+  log_container.style.display = "block";
+  sign_container.style.display = "none";
+});
+//sign up (in login)
+let login_sign = document.getElementById("login_sign");
+login_sign.addEventListener("click", () => {
+  log_container.style.display = "none";
+  sign_container.style.display = "block";
+});
+//registration
+let log_form = document.getElementById("log_form");
+let log_pass = document.getElementById("log_pass");
+let sign_form = document.getElementById("sign_form");
+let username = document.getElementById("username");
+let email_val = document.getElementById("email_val");
+let log_email = document.getElementById("log_email");
+sign_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  cvladi = true;
+  let PasswordValidation =
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+  if (!PasswordValidation.test(sign_pass.value)) {
+    sign_pass.classList.add("input_err");
+    cvladi = false;
+  } else {
+    sign_pass.classList.remove("input_err");
+  }
+  let TextValidation = /^[a-zA-Z]+$/;
+  if (!TextValidation.test(username.value)) {
+    username.classList.add("input_err");
+    cvladi = false;
+  } else {
+    username.classList.remove("input_err");
+  }
+  let EmailValidation =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  if (!EmailValidation.test(email_val.value)) {
+    email_val.classList.add("input_err");
+    cvladi = false;
+  } else {
+    email_val.classList.remove("input_err");
+  }
+  if (repeat_pass.value !== sign_pass.value || repeat_pass.value === "") {
+    repeat_pass.classList.add("input_err");
+    cvladi = false;
+  } else {
+    repeat_pass.classList.remove("input_err");
+  }
+  if (cvladi) {
+    log_container.style.display = "block";
+    sign_container.style.display = "none";
+  }
+  let information = {
+    username: username.value,
+    email: email_val.value,
+    password: sign_pass.value,
+  };
+  localStorage.setItem("info", JSON.stringify(information));
+  repeat_pass.value = "";
+  email_val.value = "";
+  username.value = "";
+  sign_pass.value = "";
+});
+log_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let ParsedStorage = JSON.parse(localStorage.getItem("info"));
+  if (
+    log_email.value === ParsedStorage.email &&
+    log_pass.value === ParsedStorage.password
+  ) {
+    alert("Congratulations, you have succesfully logged in!");
+    log_email.value = "";
+    log_pass.value = "";
+  } else {
+    alert("Wrong!");
+    log_email.value = "";
+    log_pass.value = "";
+  }
 });
