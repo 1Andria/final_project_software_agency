@@ -49,9 +49,9 @@
 }
 .head_ul{
     display: flex;
-    list-style: none;
     gap: 37px;
     align-items: center;
+    list-style: none;
 }
 .head_name{
     color: #FFF;
@@ -560,6 +560,7 @@
     border-radius: 20px;
     padding-left: 10px;
     font-size: 14px;
+    transition: 0s;
 }
 .log_sign_input::placeholder{
     font-size: 14px;
@@ -734,6 +735,11 @@
             height: 780px;
         }
     }
+}
+.input_err{
+    background-color:#f8d7da ;
+    transition: 0s;
+    border: 2px solid red;
 }
 .sign_up{
     width: 800px;
