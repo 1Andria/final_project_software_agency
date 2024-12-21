@@ -19,7 +19,12 @@ but_l.addEventListener("click", () => {
 
 //close video when its ended.
 hidden_video.addEventListener("ended", () => {
-  hidden_container.style.display = "none";
+  hidden_container.classList.remove("hidden_container_main");
+  hidden_container.classList.add("hidden_container_plus");
+  setTimeout(() => {
+    hidden_container.style.display = "none";
+    hidden_container.classList.remove("hidden_container_plus");
+  }, 1000);
 });
 
 //burger menu
@@ -60,15 +65,24 @@ let log_container = document.getElementById("log_container");
 let rem_btn = document.getElementById("rem_btn");
 let login_hidden = document.getElementById("login_hidden");
 login_div.addEventListener("click", () => {
+  log_container.classList.remove("log_container_plus");
   log_container.style.display = "block";
+  log_container.classList.add("log_container_main");
 });
 
 rem_btn.addEventListener("click", () => {
-  log_container.style.display = "none";
+  log_container.classList.remove("log_container_main");
+  log_container.classList.add("log_container_plus");
+  setTimeout(() => {
+    log_container.style.display = "none";
+    log_container.classList.remove("log_container_plus");
+  }, 900);
 });
 
 login_hidden.addEventListener("click", () => {
+  log_container.classList.remove("log_container_plus");
   log_container.style.display = "block";
+  log_container.classList.add("log_container_main");
 });
 //social networks
 let facebook = document.getElementById("facebook");
@@ -92,15 +106,30 @@ gmail.addEventListener("click", () => {
   window.open("https://workspace.google.com/gmail/");
 });
 
-//on click sign up container appear
+//on click sign up container appear and dissapear.
 let head_sign = document.getElementById("head_sign");
 let sign_container = document.getElementById("sign_container");
-head_sign.addEventListener("click", () => {
-  sign_container.style.display = "block";
-});
+let sign_rem_btn = document.getElementById("sign_rem_btn");
 let sign_hidden = document.getElementById("sign_hidden");
-sign_hidden.addEventListener("click", () => {
+head_sign.addEventListener("click", () => {
+  sign_container.classList.remove("log_container_plus");
   sign_container.style.display = "block";
+  sign_container.classList.add("log_container_main");
+});
+
+sign_rem_btn.addEventListener("click", () => {
+  sign_container.classList.remove("log_container_main");
+  sign_container.classList.add("log_container_plus");
+  setTimeout(() => {
+    sign_container.style.display = "none";
+    sign_container.classList.remove("log_container_plus");
+  }, 900);
+});
+
+sign_hidden.addEventListener("click", () => {
+  sign_container.classList.remove("log_container_plus");
+  sign_container.style.display = "block";
+  sign_container.classList.add("log_container_main");
 });
 //sign up visible/unvisible password
 let sign_seen = document.getElementById("sign_seen");
@@ -130,12 +159,7 @@ repeat_see_btn.addEventListener("click", (e) => {
     repeat_pass.type = "password";
   }
 });
-//on click div disappeared
-let sign_rem_btn = document.getElementById("sign_rem_btn");
 
-sign_rem_btn.addEventListener("click", () => {
-  sign_container.style.display = "none";
-});
 //sign up sites.
 let facebook_sign = document.getElementById("facebook_sign");
 facebook_sign.addEventListener("click", () => {
@@ -161,14 +185,28 @@ gmail_sign.addEventListener("click", () => {
 //sign in(in sign up)
 let sign_login = document.getElementById("sign_login");
 sign_login.addEventListener("click", () => {
+  log_container.classList.remove("log_container_plus");
   log_container.style.display = "block";
-  sign_container.style.display = "none";
+  log_container.classList.add("log_container_main");
+  sign_container.classList.remove("log_container_main");
+  sign_container.classList.add("log_container_plus");
+  setTimeout(() => {
+    sign_container.style.display = "none";
+    sign_container.classList.remove("log_container_plus");
+  }, 900);
 });
 //sign up (in login)
 let login_sign = document.getElementById("login_sign");
 login_sign.addEventListener("click", () => {
-  log_container.style.display = "none";
+  sign_container.classList.remove("log_container_plus");
   sign_container.style.display = "block";
+  sign_container.classList.add("log_container_main");
+  log_container.classList.remove("log_container_main");
+  log_container.classList.add("log_container_plus");
+  setTimeout(() => {
+    log_container.style.display = "none";
+    log_container.classList.remove("log_container_plus");
+  }, 900);
 });
 //registration
 let log_form = document.getElementById("log_form");
