@@ -1,16 +1,20 @@
 //watch video on a click.
-let hidden_container = document.getElementById("hidden_container");
 let watch_btn = document.getElementById("watch_btn");
+let hidden_container = document.getElementById("hidden_container");
 let but_l = document.getElementById("but_l");
-let hidden_video = document.getElementById("hidden_video");
-
 watch_btn.addEventListener("click", () => {
+  hidden_container.classList.remove("hidden_container_plus");
   hidden_container.style.display = "block";
+  hidden_container.classList.add("hidden_container_main");
 });
-
 //close video on click.
 but_l.addEventListener("click", () => {
-  hidden_container.style.display = "none";
+  hidden_container.classList.remove("hidden_container_main");
+  hidden_container.classList.add("hidden_container_plus");
+  setTimeout(() => {
+    hidden_container.style.display = "none";
+    hidden_container.classList.remove("hidden_container_plus");
+  }, 1000);
 });
 
 //close video when its ended.
@@ -208,12 +212,12 @@ sign_form.addEventListener("submit", (e) => {
   if (cvladi) {
     log_container.style.display = "block";
     sign_container.style.display = "none";
+    var information = {
+      username: username.value,
+      email: email_val.value,
+      password: sign_pass.value,
+    };
   }
-  let information = {
-    username: username.value,
-    email: email_val.value,
-    password: sign_pass.value,
-  };
   localStorage.setItem("info", JSON.stringify(information));
   repeat_pass.value = "";
   email_val.value = "";
@@ -228,11 +232,12 @@ log_form.addEventListener("submit", (e) => {
     log_pass.value === ParsedStorage.password
   ) {
     alert("Congratulations, you have succesfully logged in!");
-    log_email.value = "";
-    log_pass.value = "";
+    log_container.style.display = "none";
+  } else if (!ParsedStorage) {
+    alert("No user information found! Please sign up first.");
   } else {
     alert("Wrong!");
-    log_email.value = "";
-    log_pass.value = "";
   }
+  log_email.value = "";
+  log_pass.value = "";
 });
