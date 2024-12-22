@@ -32,6 +32,7 @@ let head_burg = document.getElementById("head_burg");
 let head_hidden_info = document.getElementById("head_hidden_info");
 let head_ul_hid = document.getElementById("head_ul_hid");
 head_burg.addEventListener("click", () => {
+  head_burg.classList.toggle("burg_plus");
   head_hidden_info.classList.toggle("head_hidden_info_plus");
   setTimeout(() => {
     head_ul_hid.classList.toggle("head_ul_hid_plus");
