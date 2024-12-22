@@ -280,3 +280,23 @@ log_form.addEventListener("submit", (e) => {
   log_email.value = "";
   log_pass.value = "";
 });
+//second section image
+async function secondSectionImage() {
+  try {
+    let data = await fetch("https://fakestoreapi.com/products/10");
+    let secondSectImage = await data.json();
+    let image = document.getElementById("second_section_pic");
+    image.src = secondSectImage.image;
+  } catch (error) {}
+}
+secondSectionImage();
+
+async function SectionHiddenImage() {
+  try {
+    let data = await fetch("https://fakestoreapi.com/products/10");
+    let secondSectImage = await data.json();
+    let image = document.getElementById("sec_hid_pic");
+    image.src = secondSectImage.image;
+  } catch (error) {}
+}
+SectionHiddenImage();
