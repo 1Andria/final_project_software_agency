@@ -1228,7 +1228,7 @@
     .sec_thr_br{
         display: none;
     }
-
+}
 .section_four{
     display: flex;
     max-width: 1200px;
@@ -1380,3 +1380,4 @@
     .section_four{
         margin-top: 128px;
     }
+}
