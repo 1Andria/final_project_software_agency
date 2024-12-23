@@ -335,6 +335,7 @@ async function FetchedImage() {
 }
 FetchedImage();
 
+
 //section four swiper info array
 let SecFrArray = [
   {
@@ -421,3 +422,4 @@ var swiper_sec_four = new Swiper(".sec_four_mySwiper", {
 });
 
 swiper_sec_four.update();
+
