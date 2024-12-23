@@ -300,3 +300,124 @@ async function SectionHiddenImage() {
   } catch (error) {}
 }
 SectionHiddenImage();
+//პირველ განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+let thr_first = document.getElementById("thr_first");
+let thr_arrow = document.getElementById("thr_arrow");
+let thr_first_para = document.getElementById("thr_first_para");
+thr_first.addEventListener("click", () => {
+  thr_arrow.classList.toggle("thr_arrow_plus");
+  thr_first_para.classList.toggle("thr_text_para_plus");
+});
+//მეორე განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+
+let thr_sec = document.getElementById("thr_sec");
+let thr_sec_para = document.getElementById("thr_sec_para");
+let thr_sec_arrow = document.getElementById("thr_sec_arrow");
+thr_sec.addEventListener("click", () => {
+  thr_sec_arrow.classList.toggle("thr_arrow_plus");
+  thr_sec_para.classList.toggle("thr_text_para_plus");
+});
+//მესამე განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+let thr_thr = document.getElementById("thr_thr");
+let thr_thr_arrow = document.getElementById("thr_thr_arrow");
+let thr_thr_para = document.getElementById("thr_thr_para");
+thr_thr.addEventListener("click", () => {
+  thr_thr_arrow.classList.toggle("thr_arrow_plus");
+  thr_thr_para.classList.toggle("thr_text_para_plus");
+});
+//ფოტო APIდან
+let sec_thr_img = document.getElementById("sec_thr_img");
+
+async function FetchedImage() {
+  let data = await fetch("https://fakestoreapi.com/products/6");
+  let product = await data.json();
+  sec_thr_img.src = product.image;
+}
+FetchedImage();
+
+//section four swiper info array
+let SecFrArray = [
+  {
+    img: "./images/develop.jpg",
+    date: "JUNE,2021",
+    benefit: "Build Website For Apey",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/create_logo.jpg",
+    date: "JUNE,2021",
+    benefit: "Design Process Mobile App",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/mob_app.png",
+    date: "JUNE,2021",
+    benefit: "Discuss About App",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/iphone_apps.jpg",
+    date: "JUNE,2021",
+    benefit: "Create Logo For Brand",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/analyze.jpg",
+    date: "JUNE,2021",
+    benefit: "Analyze Feedback",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/strategy.png",
+    date: "JUNE,2021",
+    benefit: "Content Strategy",
+    description: "We build a software to make your business better",
+  },
+  {
+    img: "./images/benefit.webp",
+    date: "JUNE,2021",
+    benefit: "Maximum Benefit",
+    description: "We build a software to make your business better",
+  },
+];
+
+let wrapper = document.getElementById("wrapper");
+
+SecFrArray.forEach((slide) => {
+  let SliderDiv = document.createElement("div");
+  SliderDiv.classList.add("first_swiper", "swiper-slide");
+
+  let img = document.createElement("img");
+  img.classList.add("sec_fr_img");
+  img.src = slide.img;
+  SliderDiv.appendChild(img);
+
+  let DatePara = document.createElement("p");
+  DatePara.classList.add("s_fr_date");
+  DatePara.textContent = slide.date;
+  SliderDiv.appendChild(DatePara);
+
+  let Benefithead = document.createElement("h");
+  Benefithead.classList.add("s_fr_head");
+  Benefithead.textContent = slide.benefit;
+  SliderDiv.appendChild(Benefithead);
+
+  let DescriptionPara = document.createElement("p");
+  DescriptionPara.classList.add("s_fr_p");
+  DescriptionPara.textContent = slide.description;
+  SliderDiv.appendChild(DescriptionPara);
+
+  wrapper.appendChild(SliderDiv);
+});
+
+var swiper_sec_four = new Swiper(".sec_four_mySwiper", {
+  slidesPerView: 3,
+  loop: true,
+  spaceBetween: 30,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+  },
+});
+
+swiper_sec_four.update();
