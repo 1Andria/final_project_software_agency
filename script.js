@@ -300,3 +300,37 @@ async function SectionHiddenImage() {
   } catch (error) {}
 }
 SectionHiddenImage();
+//პირველ განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+let thr_first = document.getElementById("thr_first");
+let thr_arrow = document.getElementById("thr_arrow");
+let thr_first_para = document.getElementById("thr_first_para");
+thr_first.addEventListener("click", () => {
+  thr_arrow.classList.toggle("thr_arrow_plus");
+  thr_first_para.classList.toggle("thr_text_para_plus");
+});
+//მეორე განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+
+let thr_sec = document.getElementById("thr_sec");
+let thr_sec_para = document.getElementById("thr_sec_para");
+let thr_sec_arrow = document.getElementById("thr_sec_arrow");
+thr_sec.addEventListener("click", () => {
+  thr_sec_arrow.classList.toggle("thr_arrow_plus");
+  thr_sec_para.classList.toggle("thr_text_para_plus");
+});
+//მესამე განყოფილებაზე დაჭერისას დამატებითი ტექსტის ჩვენება
+let thr_thr = document.getElementById("thr_thr");
+let thr_thr_arrow = document.getElementById("thr_thr_arrow");
+let thr_thr_para = document.getElementById("thr_thr_para");
+thr_thr.addEventListener("click", () => {
+  thr_thr_arrow.classList.toggle("thr_arrow_plus");
+  thr_thr_para.classList.toggle("thr_text_para_plus");
+});
+//ფოტო APIდან
+let sec_thr_img = document.getElementById("sec_thr_img");
+
+async function FetchedImage() {
+  let data = await fetch("https://fakestoreapi.com/products/6");
+  let product = await data.json();
+  sec_thr_img.src = product.image;
+}
+FetchedImage();
