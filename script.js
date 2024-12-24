@@ -26,7 +26,7 @@ hidden_video.addEventListener("ended", () => {
     hidden_container.classList.remove("hidden_container_plus");
   }, 1000);
 });
-//scroll
+//scroll down
 let get_started = document.getElementById("get_started");
 get_started.addEventListener(`click`, () => {
   window.scrollTo({
@@ -542,4 +542,12 @@ var Swiper = new Swiper(".mySwiper", {
 
 Swiper.update();
 
-///////////////////////
+//scroll up
+const scrollToTop = document.querySelector(`#last_section_button`);
+
+scrollToTop.addEventListener(`click`, () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
