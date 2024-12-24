@@ -26,7 +26,14 @@ hidden_video.addEventListener("ended", () => {
     hidden_container.classList.remove("hidden_container_plus");
   }, 1000);
 });
-
+//scroll
+let get_started = document.getElementById("get_started");
+get_started.addEventListener(`click`, () => {
+  window.scrollTo({
+    top: 1000,
+    behavior: "smooth",
+  });
+});
 //burger menu
 let head_burg = document.getElementById("head_burg");
 let head_hidden_info = document.getElementById("head_hidden_info");
@@ -335,7 +342,6 @@ async function FetchedImage() {
 }
 FetchedImage();
 
-
 //section four swiper info array
 let SecFrArray = [
   {
@@ -423,3 +429,117 @@ var swiper_sec_four = new Swiper(".sec_four_mySwiper", {
 
 swiper_sec_four.update();
 
+//
+//კითხვებზე დაჭერისას პასუხის ჩვენება.
+//პირველი კითხვა
+let arrow = document.getElementById("arrow");
+let first_question = document.getElementById("sec_fif_ques_frst");
+let ques_para = document.getElementById("ques_para");
+let que_fst_p = document.getElementById("que_fst_p");
+
+first_question.addEventListener("click", () => {
+  arrow.classList.toggle("arrow_plus");
+  ques_para.classList.toggle("ques_para_plus");
+  que_fst_p.classList.toggle("que_p_plus");
+});
+//მეორე კითხვა
+let second_question = document.getElementById("second_question");
+let sec_arrow = document.getElementById("sec_arrow");
+let sec_ques_para = document.getElementById("sec_ques_para");
+let que_sec_p = document.getElementById("que_sec_p");
+
+second_question.addEventListener("click", () => {
+  sec_arrow.classList.toggle("arrow_plus");
+  sec_ques_para.classList.toggle("ques_para_plus");
+  que_sec_p.classList.toggle("que_p_plus");
+});
+//მესამე შეკითხვა
+let third_question = document.getElementById("third_question");
+let fif_thr_arrow = document.getElementById("fif_thr_arrow");
+let thr_ques_para = document.getElementById("thr_ques_para");
+let que_thr_p = document.getElementById("que_thr_p");
+
+third_question.addEventListener("click", () => {
+  fif_thr_arrow.classList.toggle("arrow_plus");
+  thr_ques_para.classList.toggle("ques_para_plus");
+  que_thr_p.classList.toggle("que_p_plus");
+});
+//მეოთხე შეკითხვა
+let fourth_question = document.getElementById("fourth_question");
+let frth_arrow = document.getElementById("frth_arrow");
+let frth_ques_para = document.getElementById("frth_ques_para");
+let que_frth_p = document.getElementById("que_frth_p");
+
+fourth_question.addEventListener("click", () => {
+  frth_arrow.classList.toggle("arrow_plus");
+  frth_ques_para.classList.toggle("ques_para_plus");
+  que_frth_p.classList.toggle("que_p_plus");
+});
+//მეხუთე შეკითხვა
+let fth_ques_para = document.getElementById("fth_ques_para");
+let fifth_question = document.getElementById("fifth_question");
+let fth_arrow = document.getElementById("fth_arrow");
+let que_fth_p = document.getElementById("que_fth_p");
+
+fifth_question.addEventListener("click", () => {
+  fth_arrow.classList.toggle("arrow_plus");
+  fth_ques_para.classList.toggle("ques_para_plus");
+  que_fth_p.classList.toggle("que_p_plus");
+});
+// section five slider.
+let Sec_Fif_array = [
+  {
+    header: "1.Do you offer marketing help to your clients?",
+    paragraph:
+      "We provide marketing help on two separate levels. During Road- mapping, we offer every client to help with the conception of an overall marketing",
+  },
+  {
+    header: "2. Can you start a project remotely?",
+    paragraph:
+      "Yes.Our team is experienced in managing remote collaborations and maintaining clear progress tracking toachieve successful outcomes.",
+  },
+  {
+    header: "3. Do you accept equity as compensation?",
+    paragraph:
+      "We may accept equity as compensation in select cases, depending on the project'snature and alignment with our goals, ensuring a mutuallybeneficial arrangement.",
+  },
+  {
+    header: "4. How much does light it cost?",
+    paragraph:
+      "The cost varies by project scope and complexity. We tailor pricing to your needs and provide a clear estimate duringRoadmapping.",
+  },
+  {
+    header: "5. Do you have development experience with react native?",
+    paragraph:
+      "Yes, our team is highly experienced with React Native, having built and launched numerouscross-platform applications efficiently.",
+  },
+];
+let sec_fif_wrapper = document.getElementById("sec_fif_wrapper");
+Sec_Fif_array.forEach((question) => {
+  let SFdiv = document.createElement("div");
+  SFdiv.classList.add("swiper-slide");
+
+  let SFhead = document.createElement("h");
+  SFhead.textContent = question.header;
+  SFhead.classList.add("fif_slide_header");
+  SFdiv.appendChild(SFhead);
+
+  let SFpara = document.createElement("p");
+  SFpara.textContent = question.paragraph;
+  SFpara.classList.add("fif_slide_para");
+  SFdiv.appendChild(SFpara);
+
+  sec_fif_wrapper.appendChild(SFdiv);
+});
+
+var Swiper = new Swiper(".mySwiper", {
+  loop: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+  },
+});
+
+Swiper.update();
+
+///////////////////////
