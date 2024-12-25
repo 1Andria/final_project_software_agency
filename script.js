@@ -256,7 +256,9 @@ sign_form.addEventListener("submit", (e) => {
     repeat_pass.classList.remove("input_err");
   }
   if (cvladi) {
+    log_container.classList.remove("log_container_plus");
     log_container.style.display = "block";
+    log_container.classList.add("log_container_main");
     sign_container.style.display = "none";
     var information = {
       username: username.value,
